@@ -42,7 +42,7 @@
                         <span class="get-application">ПОДАТЬ ЗАЯВКУ</span>
                         <form action="">
                             <input type="text" placeholder="Введите ваше имя">
-                            <input type="tel" placeholder="Введите ваш телефон" pattern="(\+?\d[- .]*){7,13}">
+                            <input id="phone" type="tel" placeholder="Введите ваш телефон" pattern="(\+?\d[- .]*){7,13}">
                             <input type="emale" placeholder="Введите ваш e-mail" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}">
                             <input type="submit" value="ОТПРАВИТЬ">
                         </form>
@@ -63,5 +63,27 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/jquery.maskedinput.js"></script>
+     <script type="text/javascript">
+
+jQuery(function($) {
+
+$.mask.definitions['~']='[+-]';
+
+$('#date').mask('99/99/9999');
+
+$('#phone').mask('+7(999) 999-9999');
+
+$('#phoneext').mask("(999) 999-9999? x99999");
+
+$("#tin").mask("99-9999999");
+
+$("#ssn").mask("999-99-9999");
+
+$("#product").mask("a*-999-a999");
+
+$("#eyescript").mask("~9.99 ~9.99 999");
+
+});</script> 
   </body>
 </html>
